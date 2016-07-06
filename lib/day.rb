@@ -12,11 +12,29 @@ class Day
 
 	#simple print statements
 	def print
+		puts "------------------------------"
 		(puts "Day of the week: " + @day) if @day
-		(puts "High: " + @high) if @high
-		(puts "Low: " + @low) if @low
-		(puts "Status: " + @status) if @status
-		(puts "More information: " + @info) if @info
+		if ( @day && @status )
+			puts @day + " - " + @status
+		end
+		#(puts @high) if @high
+		#(puts @low) if @low
+		#(puts "Status: " + @status) if @status
+		(puts "Info: " + @info) if @info
+		puts "------------------------------"
 	end
+
+	#prints light version of info
+	def printlite
+		puts "------------------------------"
+		if ( @day && @status )
+			puts @day + " - " + @status
+		end
+		if ( @high && @low )
+			puts @high + "\t" + @low
+		end
+		puts "------------------------------"
+	end
+
 end
 

@@ -11,7 +11,7 @@ class Scraper
 		#binding.pry 
 	end
 
-
+=begin
 	#returns current status for today and high/low temperature
 	#as an array
 	def self.today
@@ -30,6 +30,7 @@ class Scraper
 			[status, highlow].flatten
 		end
 	end
+=end
 	
 	#stores the next 6 days of the forecast and returns an array
 	def self.otherdays
@@ -42,12 +43,14 @@ class Scraper
 		else
 			days = []
 			#other days
-			(0..5).to_a.each do | i |
+			#index error
+			#(0..5).to_a.each do | i |
+			(0..6).to_a.each do | i |
 				#some regex to make the string look pretty
 				tmp =  @@doc.css("div.BdB")[i].text.sub(/day\d*%/, 'day, High:' )
 				tmp = tmp.sub(@@symb , @@symb + 'Low:')
 				tmp = tmp.sub(@@symb , @@symb + ' ')
-				tmp[tmp.index(/°\S/)] = @@symb + ' - '
+				tmp[tmp.index(/°\S/)] = @@symb + ' --- '
 				days << tmp
 			end
 			return days
