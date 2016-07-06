@@ -19,3 +19,4 @@ class Day
 		(puts "More information: " + @info) if @info
 	end
 end
+

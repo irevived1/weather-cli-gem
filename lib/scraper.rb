@@ -47,7 +47,7 @@ class Scraper
 				tmp =  @@doc.css("div.BdB")[i].text.sub(/day\d*%/, 'day, High:' )
 				tmp = tmp.sub(@@symb , @@symb + 'Low:')
 				tmp = tmp.sub(@@symb , @@symb + ' ')
-				tmp[tmp.index(/°\S/)] = @@symb + ' '
+				tmp[tmp.index(/°\S/)] = @@symb + ' - '
 				days << tmp
 			end
 			return days
@@ -62,9 +62,9 @@ class Scraper
 	end
 end
 
-#url = "https://www.yahoo.com/news/weather"
 #url = "https://www.google.com/search?q=google+weather"
 #url = "https://www.wunderground.com/cgi-bin/findweather/getForecast?query=11204"
+#url = "https://www.yahoo.com/news/weather"
 #Scraper.scrape_page(url)
 #puts Scraper.today
 #puts Scraper.otherdays
