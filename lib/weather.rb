@@ -12,6 +12,10 @@ class Weather
 	#attr_reader :today, :tomorrow, :days
 	#massive initialize function
 	def initialize
+		refresh
+	end
+
+	def refresh
 		@tomorrow = nil
 		@today = nil
 		#initialize an array for days
@@ -61,7 +65,6 @@ class Weather
 			#filling in today and tomorrow
 			@tomorrow = @days[index] if (@today != nil && @tomorrow == nil)
 			@today = @days[index] if @today == nil
-
 			
 		end
 	end
@@ -121,7 +124,19 @@ class Weather
 			count += 1
 		end
 	end
+
+	def help
+		puts "USEAGE"
+		puts "---------------\n"
+		puts "This program defaults to two-day forecast if no argument is provided."
+		puts "\nTo use the available arguments, please look at the flags below.\n"
+		puts "-t\t\tPrints the weather for tomorrow.\n"
+		puts "-n\t\tPrints the weather for today.\n"
+		puts "-w\t\tPrints the weather for the whole week.\n"
+		puts "-d\t\tAdd this flag behind the others for detail information. eg: -td , -nd, -wd..\n"
+		puts "-h or --help for help"
+	end
 end
 
-weather = Weather.new
-weather.sevenDayInfo
+#weather = Weather.new
+#weather.today
