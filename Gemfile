@@ -1,6 +1,5 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'pry'
-gem 'require_all'
-gem 'nokogiri'
-gem 'open-uri'
+
+# Specify your gem's dependencies in weathercli.gemspec
+gemspec
