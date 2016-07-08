@@ -6,6 +6,14 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
+Execute
+    $ bundle
+then run weathercli in the local bin directory.
+
+If the following error occurs:
+	`connect_nonblock': SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (OpenSSL::SSL::SSLError)
+The error above can be solved by the following command: brew upgrade openssl
+<!--
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -19,10 +27,11 @@ And then execute:
 Or install it yourself as:
 
     $ gem install weathercli
+-->
 
 ## Usage
 
-TODO: Write usage instructions here
+SEE NOTE.md 
 
 ## Development
 
