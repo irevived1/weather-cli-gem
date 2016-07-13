@@ -1,5 +1,5 @@
 class Day
-
+	
 	#getter and setter macros
 	attr_accessor :day , :high , :low , :status, :info
 
@@ -17,9 +17,6 @@ class Day
 		if ( @day && @status )
 			puts @day + " - " + @status
 		end
-		#(puts @high) if @high
-		#(puts @low) if @low
-		#(puts "Status: " + @status) if @status
 		(puts "Info: " + @info) if @info
 		puts "------------------------------"
 	end

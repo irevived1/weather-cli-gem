@@ -9,7 +9,7 @@ require_relative "weathercli/version"
 require_relative "weathercli/cli.rb"
 require_relative "weathercli/day.rb"
 require_relative "weathercli/scraper.rb"
-require_relative "weathercli/weather.rb"
+require_relative "weathercli/week.rb"
 
 module Weathercli
   # Your code goes here...
